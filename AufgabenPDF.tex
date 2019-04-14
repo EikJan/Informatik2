@@ -57,6 +57,36 @@ $\displaystyle\frac{2n^3+9n^2+13n+6}{6}$\\\\
 
 \section*{Aufgabe 2}
 
+\begin{itemize}
+	\item[a)]
+		Die Aussage ist falsch.
+		Beweis (vollständige Induktion):
+		\begin{itemize}
+			\item[]
+				\textit{Hilfssatz: $n^2 > 2*n +1$ für $n\geq5$.\\}
+				IA: trivial\\
+				IS: $(n+1)^2 = n^2 + 2n +1 \overset{IV}{>} 2n+1+2n+1 = 4n+2 > 2n+3=2(n+1)+1$.
+		\end{itemize}
+		Behauptung: $2^n > n^2$ für $n\geq5$. \\
+		IA: $2^5 = 32 > 25 = 5^2$
+		IV: die Behauptung gelte für ein beliebiges, aber festes $n \in \mathbb{N} $. \\
+		IS $n \mapsto n+1$: \\
+		\begin{center}
+			$ 2^{n+1} = 2*2^n = n^2 + n^2 > n^2 + 2*n+1=(n-1)^2 $
+		\end{center}
+		$\Rightarrow 2^n +4 \notin \mathcal{O}(n^2)$. \\
+	\item[b)]
+		Die Aussage ist wahr. Nach Regel 4 gilt: $log(n^2) = 2*log(n)$. Wähle z.B. $c_1=3$, dann ist die Ungleichung aus der Definition immer erfüllt.\\
+	\item[c)]
+		Die Aussage ist falsch. Widerspruchsbeweis:\\
+		Annahme: $3^n \in \mathcal{O}(2^n) \\ \Rightarrow \exists c_1 <0 \exists n_0 < 0 \forall n > n_0: 3^n \leqslant c_1 *2^n$. Seien $c_1$ und $n_0$ nun beliebig, aber fest. Dann gilt: 
+		$3^n \leqslant c_1 * 2^n \Leftrightarrow (\frac{3}{2})^n \leqslant c_1$. Es ist allerdings nicht möglich, ein c zu finden, sodass die Ungleichung immer erfüllt ist. Daraus folgt, dass die Annahme falsch gewesen sein muss $\Rightarrow 3^n \notin \mathcal{O}(2^n). \quad\square$\\
+	\item[d)]
+		Die Aussage ist wahr. Es gilt $4*log_{10} n = 4* \frac{log_2 n}{log_2 10}$ (Regel 5). Wähle analog zu Aufgabenteil b) z.B. $c_1 = 5$. \\
+	\item[e)]
+		Die Aussage ist falsch. Es gilt nach Regel 8 $(n^3)^2 = (n^{2*3}) = n^6 > n^5$\\.
+\end{itemize}
+
 \pagebreak
 
 \section*{Aufgabe 3}

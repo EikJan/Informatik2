@@ -84,25 +84,31 @@ $\displaystyle\frac{2n^3+9n^2+13n+6}{6}$\\\\
 	\item[d)]
 		Die Aussage ist wahr. Es gilt $4*log_{10} n = 4* \frac{log_2 n}{log_2 10}$ (Regel 5). Wähle analog zu Aufgabenteil b) z.B. $c_1 = 5$. \\
 	\item[e)]
-		Die Aussage ist falsch. Es gilt nach Regel 8 $(n^3)^2 = (n^{2*3}) = n^6 > n^5$\\.
+		Die Aussage ist falsch. Es gilt nach Regel 8 $(n^3)^2 = (n^{2*3}) = n^6 > n^5$.
 \end{itemize}
 
 \pagebreak
 
 \section*{Aufgabe 3}
 
-\leftskip 1.5em
-\subsection*{(a)}
-\leftskip 3em
-
-Inhalt
-
-\leftskip 1.5em
-\subsection*{(b)}
-\leftskip 3em
-
-Inhalt
-
-\leftskip 0em
+\begin{itemize}
+	\item[a)]
+		Die Methode iteriert in jedem Fall komplett über das Array a. Daher werden, wenn n die Länge des Arrays bezeichnet, += und * jeweils n-mal ausgeführt (Komplexität = 2*n).
+		Sonderfall: Wäre a = [] wäre die Komplexität bei Zählung von += und * 0.\\
+		Es wäre sinnvoller < zu zählen. Die Komplexität wäre hierbei n und im Sonderfall 1.
+	\item[b)]
+		Auflistung aller Operationen:\\
+		\hspace*{7mm}\textit{Anzahl}\hspace*{8mm}\textit{Operation}\\
+		\hspace*{10mm} 1 \hspace*{10mm} = (Zuweisung sum) \\
+		\hspace*{10mm} 1 \hspace*{10mm} = (Zuweisung i)\\
+		\hspace*{10mm} n \hspace*{10mm} < in Schleife\\
+		\hspace*{10mm} n \hspace*{10mm} ++ in Schleife\\
+		\hspace*{10mm} n \hspace*{10mm} += in Zeile 4\\
+		\hspace*{10mm} n \hspace*{10mm} * in Zeile 4\\
+		\hspace*{10mm} n \hspace*{10mm} Arrayzugriff auf a\\
+		\hspace*{10mm} n \hspace*{10mm} Arrayzugriff auf b\\
+		\hspace*{10mm} 1 \hspace*{10mm} return in Zeile 6\\
+		Durch Addieren dieser Operationen ergibt sich eine Komplexität von $6*n+3$ und es gilt $6*n+3 \in \mathcal{O}(n)$.
+\end{itemize}
 
 \end{document}
